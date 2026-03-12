@@ -40,7 +40,8 @@ public class KtpController {
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Integer id) {
+    public String delete(@PathVariable Integer id){
         service.delete(id);
+        return "Data KTP berhasil dihapus";
     }
 }
